@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const items = document.querySelectorAll('.description p');
+    const items = document.querySelectorAll('.rotate p');
     if (!items.length) return;
     let current = 0;
 

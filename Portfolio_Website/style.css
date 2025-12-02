@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+
+/* Main header: full-width and centered */
+.mainHeader{
+    background: #4c6942;
+    color: #9db594;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    max-width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.mainHeader h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* header icons (small, centered under header) */
+.header-icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.header-icons .icon img{
+    width: 64px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Description section: full-width background */
+.description {
+    background: #9db594;
+    color: #4c6942;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0; /* remove top gap so it connects to the header */
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* inner content shifted left but not past halfway */
+.description-inner {
+    box-sizing: border-box;
+    padding: 3rem 1.25rem;
+    text-align: left;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-left: 10%; /* reduced from 20% to keep within first half of page */
+}
+
+/* Rotating description paragraphs (fade in/out) */
+.description-inner{
+    position: relative;
+    min-height: 320px; /* taller section for images/content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rotate-row{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.static-text{
+    /* match the rotating words size so they look identical */
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    line-height: 1.1;
+    color: #4c6942;
+    font-weight: 500;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
+}
+
+/* rotating inline block */
+.rotate{
+    position: relative;
+    min-width: 0; /* allow words to size naturally */
+    display: inline-block;
+    height: auto;
+}
+
+.rotate p{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* vertically center inside .rotate */
+    margin: 0;
+    opacity: 0;
+    transition: opacity 600ms ease;
+    text-align: left;
+    will-change: opacity, transform;
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+    line-height: 1.1;
+    color: #4c6942;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+}
+
+.rotate p.active{
+    opacity: 1;
+}
+
+/* main paragraph placed under the rotating words */
+.main-paragraph{
+    max-width: 40vw; /* keeps paragraph within left half of page */
+    margin-top: 0.5rem;
+    color: #fff;
+    flex: 1;
+    font-size: 25px;
+}
+
+/* paragraph and image side by side */
+.paragraph-image-row{
+    display: flex;
+    align-items: flex-start;
+    gap: 17rem;
+    margin-top: 1rem;
+}
+
+.photo-container{
+    flex-shrink: 0;
+}
+
+.photo-container img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 1600px;
+}
+
+/* Project section: full-width background #4c6942*/
+.projects {
+    background: #4c6942;
+    color : #9db594;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.projects-inner {
+    box-sizing: border-box;
+    padding: 3rem 1.25rem;
+    text-align: left;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-left: 10%;
+    min-height: 320px;
+}
+
+.projects-button{
+    background: #9db594;
+    border: none;
+    color: #4c6942;
+}
+
+/* Links section: full-width background #9db594*/
+.links {
+    background: #9db594;
+    color: #4c6942;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* Links inner content */
+.links-inner {
+    box-sizing: border-box;
+    padding: 3rem 1.25rem;
+    text-align: left;
+    font-family: 'Stack Sans Headline', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-left: 10%;
+    min-height: 320px;
+}
+
+/* row holding the link icons under Links: */
+.links-row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.links-row .link-item img{
+    width: 64px;
+    height: auto;
+    display: block;
+}
